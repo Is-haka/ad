@@ -123,3 +123,73 @@
     color: black;
     transition: all .3s ease-in-out;
 }
+@media screen and (max-width: 1340px) {
+    
+}
+@media screen and (max-width: 1200px){
+    
+}
+@media screen and (max-width: 1000px) {
+    
+}
+@media screen and (max-width: 992px){
+    
+}
+@media screen and (max-width: 800px){
+    
+}
+@media screen and (max-width: 770px) {
+    
+}
+@media screen and (max-width: 710px){
+    
+}
+@media screen and (max-width: 600px) {
+   
+}
+@media screen and (max-width: 450px){
+    
+}
+@media screen and (max-width: 360px){
+    .nav{
+        display: none;
+    }
+    .start{
+        width: fit-content;
+    }
+    .welcome{
+        margin-top: 33.3%;
+    }
+    .leftside{
+        height: 80vh;
+    }
+    #greeting{
+        width: 220px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .form{
+        position: relative;
+        left: -3.5%;
+    }
+    #email, #password{
+        padding: 6px 8px;
+    }
+    #signup{
+        padding: 6px 8px;
+        width: 50%;
+        position: relative;
+        left: 25%;
+    }
+}
+@media screen and (max-width: 320px)
+{
+    .nav{
+        display: none;
+    }  
+}
+@media screen and (max-height: 320px){
+    .nav{
+        display: none;
+    }
+}
