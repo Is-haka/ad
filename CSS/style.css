@@ -2,16 +2,43 @@
 *
 {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+.start{
+    z-index: 10;
+    position: fixed;
+    top: 0%;
+    background: linear-gradient(-45deg, transparent, grey);
+    height: 120px;
+    width: 100%;
+    padding: 0;
 }
 .nav{
     list-style: none;
     display: flex;
     justify-content: space-around;
-    width: 600px;
+    width: 500px;
     position: relative;
     padding-top: 25px;
     left: 35%;
+    margin-top: 1%;
     
+}
+#link{
+    text-decoration: none;
+    padding: 8px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.one{
+    border: 2px solid lightgrey;
+}
+.one:focus{
+    border: 2px solid grey;
+}
+.two:focus, .three:focus{
+    border: 2px solid grey
 }
 .logo
 {
@@ -20,19 +47,24 @@
 }
 #logo
 {
-    margin: 10%;
+    margin: 18%;
     width: 200px;
+    color: #fff;
 
 }
 .welcome
 {
+    position: sticky;
     display: flex;
+    margin-top: 7.6%;
 }
 .leftside
 {
     width: 100%;
     height: 50%;
-    background: linear-gradient(45deg, black, grey, transparent);
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.916), rgba(128, 128, 128, 0.849), transparent), url(../resources/images/welcome.jpg);
+    background-position: center;
+    background-size: cover;
     padding: 5px;
 }
 #greeting{
@@ -73,10 +105,11 @@
     width: 290px;
 }
 #signup{
-    border: none;
+    border: 2px solid #fff;
     padding: 8px 10px;
     margin-top: 2%;
     margin-left: 1.2%;
+    margin-bottom: 5%;
     background: linear-gradient(-45deg, grey, lightgrey);
     border-radius: 15px;
     color: #fff;
