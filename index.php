@@ -18,9 +18,9 @@
         </div>
         <div class="navigation">
             <ul class="nav">
-                <li id="list">home</li>
-                <li id="list">contacts</li>
-                <li id="list">about</li>
+                <li id="list"><a href="#" class="one" id="link">home</a></li>
+                <li id="list"><a href="#" class="two" id="link">about</a></li>
+                <li id="list"><a href="#" class="three" id="link">contacts</a></li>
             </ul>
 </div>
     </div>
@@ -37,7 +37,7 @@
                     <input type="password" name="" id="password" placeholder="Password">
                     <input type="button" value="Sign Up" id="signup">
                 </form>
-                <span style="font-size: 14px;">Already have an account? <a href="#" >Login</a></span>
+                <span style="font-size: 14px; color: #fff; ">Already have an account? <a href="#"  style="color: lightgrey;">Login</a></span>
             </div>
         </div>
     </div>
