@@ -148,7 +148,36 @@
    
 }
 @media screen and (max-width: 450px){
-    
+    .nav{
+        display: none;
+    }
+    .start{
+        width: fit-content;
+    }
+    .welcome{
+        margin-top: 33.3%;
+    }
+    .leftside{
+        height: 80vh;
+    }
+    #greeting{
+        width: 220px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .form{
+        position: relative;
+        left: -3.5%;
+    }
+    #email, #password{
+        padding: 6px 8px;
+    }
+    #signup{
+        padding: 6px 8px;
+        width: 50%;
+        position: relative;
+        left: 25%;
+    }
 }
 @media screen and (max-width: 360px){
     .nav{
@@ -186,7 +215,34 @@
 {
     .nav{
         display: none;
-    }  
+    }
+    .start{
+        width: fit-content;
+    }
+    .welcome{
+        margin-top: 33.3%;
+    }
+    .leftside{
+        height: 80vh;
+    }
+    #greeting{
+        width: 220px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .form{
+        position: relative;
+        left: -3.5%;
+    }
+    #email, #password{
+        padding: 6px 8px;
+    }
+    #signup{
+        padding: 6px 8px;
+        width: 50%;
+        position: relative;
+        left: 25%;
+    } 
 }
 @media screen and (max-height: 320px){
     .nav{
