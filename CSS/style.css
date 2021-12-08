@@ -148,6 +148,9 @@
    
 }
 @media screen and (max-width: 450px){
+    .start{
+        background: linear-gradient(-45deg, transparent, grey);
+    }
     .nav{
         display: none;
     }
