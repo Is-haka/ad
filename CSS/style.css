@@ -62,7 +62,7 @@
 {
     width: 100%;
     height: 50%;
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.916), rgba(128, 128, 128, 0.849), transparent), url(../resources/images/welcome.jpg);
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.916), grey, transparent), url(../resources/images/welcome.jpg);
     background-position: center;
     background-size: cover;
     padding: 5px;
@@ -150,15 +150,17 @@
 @media screen and (max-width: 450px){
     .start{
         background: linear-gradient(-45deg, transparent, grey);
+        width: 100%;
+        height: fit-content;
     }
     .nav{
-        display: none;
+        display: block;
     }
     .start{
         width: fit-content;
     }
     .welcome{
-        margin-top: 33.3%;
+        margin-top: 25.3%;
     }
     .leftside{
         height: 80vh;
@@ -170,7 +172,7 @@
     }
     .form{
         position: relative;
-        left: -3.5%;
+        left: -19.5%;
     }
     #email, #password{
         padding: 6px 8px;
@@ -184,13 +186,14 @@
 }
 @media screen and (max-width: 360px){
     .nav{
-        display: none;
+        display: block;
     }
     .start{
         width: fit-content;
+        height: fit-content;
     }
     .welcome{
-        margin-top: 33.3%;
+        margin-top: 24.3%;
     }
     .leftside{
         height: 80vh;
@@ -217,7 +220,7 @@
 @media screen and (max-width: 320px)
 {
     .nav{
-        display: none;
+        display: block;
     }
     .start{
         width: fit-content;
