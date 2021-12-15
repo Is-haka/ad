@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="./vendor/bootstrap/css/style.css">
 
   </head>
 
@@ -65,9 +66,9 @@
 
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
-      <video autoplay muted loop id="bg-video">
-          <source src="assets/images/course-video.mp4" type="video/mp4" />
-      </video>
+      <div id="bg-video" class="welcome">
+          <!-- <source src="assets/images/course-video.mp4" type="video/mp4" /> -->
+      </div>
 
       <div class="video-overlay header-text">
           <div class="container">
