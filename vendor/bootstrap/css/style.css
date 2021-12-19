@@ -4,3 +4,6 @@
 .welcome{
     background: linear-gradient(-45deg, brown, red) !important;
 }
+#whead{
+    color: rgb(243, 243, 243) !important;
+}
