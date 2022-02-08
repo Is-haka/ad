@@ -485,29 +485,58 @@
 			<div class="form-right">
 				<div class="tab">
 					<div class="tab-inner">
-						<button class="tablinks" onclick="openCity(event, 'sign-up')" id="defaultOpen">Sign Up</button>
+						<button class="tablinks" onclick="openCity(event, 'sign-up')">Sign Up</button>
 					</div>
 					<div class="tab-inner">
-						<button class="tablinks" onclick="openCity(event, 'sign-in')">Sign In</button>
+						<button class="tablinks" onclick="openCity(event, 'sign-in')" id="defaultOpen">Sign In</button>
 					</div>
 				</div>
-				<form class="form-detail" action="#" method="post">
+				<form class="form-detail" action="./public/auth/register.php" method="post">
 					<div class="tabcontent" id="sign-up">
 						<div class="form-row">
 							<label class="form-row-inner">
 								<input type="text" name="full_name" id="full_name" class="input-text" required>
-								<span class="label">Username</span>
+								<span class="label">full name</span>
 		  						<span class="border"></span>
 							</label>
 						</div>
 						<div class="form-row">
 							<label class="form-row-inner">
-								<input type="text" name="your_email" id="your_email" class="input-text" required>
+								<input type="text" name="email" id="your_email" class="input-text" required>
 								<span class="label">E-Mail</span>
 		  						<span class="border"></span>
 							</label>
 						</div>
 						<div class="form-row">
+							<label class="form-row-inner">
+								<input type="text" name="physical_address" id="" class="input-text" required>
+								<span class="label">Physical address</span>
+								<span class="border"></span>
+							</label>
+						</div>
+            <div class="form-row">
+							<label class="form-row-inner">
+								<select name="gender" class="form-control text-center input-text" style="background: transparent !important; color: #fff;" id="" required>
+                  <option value="">  </option>
+                  <?php
+                    $gresult = mysqli_query($db, "SELECT * FROM gender");
+                    if($gresult){
+                      while ($gloop = mysqli_fetch_assoc($gresult)) {
+                        ?>
+                        <option value="<?php echo $gloop['id']; ?>"><?php echo "$gloop[sex]"; ?></option>
+                        <?php
+                      }
+                    }
+                    else {
+                      echo "query error";
+                    }
+                  ?>
+                </select>
+								<span class="label">Gender</span>
+								<span class="border"></span>
+							</label>
+						</div>
+            <div class="form-row">
 							<label class="form-row-inner">
 								<input type="password" name="password" id="password" class="input-text" required>
 								<span class="label">Password</span>
@@ -516,8 +545,8 @@
 						</div>
 						<div class="form-row">
 							<label class="form-row-inner">
-								<input type="password" name="comfirm_password" id="comfirm_password" class="input-text" required>
-								<span class="label">Comfirm Password</span>
+								<input type="password" name="confirm_password" id="comfirm_password" class="input-text" required>
+								<span class="label">Confirm Password</span>
 								<span class="border"></span>
 							</label>
 						</div>
@@ -526,45 +555,31 @@
 						</div>
 					</div>
 				</form>
-				<form class="form-detail" action="#" method="post">
+				<form class="form-detail" action="./public/auth/login.php" method="post">
 					<div class="tabcontent" id="sign-in">
 						<div class="form-row">
 							<label class="form-row-inner">
-								<input type="text" name="full_name_1" id="full_name_1" class="input-text" required>
-								<span class="label">Username</span>
+								<input type="text" name="log_email" id="full_name_1" class="input-text" required>
+								<span class="label">Email address</span>
 		  						<span class="border"></span>
 							</label>
 						</div>
 						<div class="form-row">
 							<label class="form-row-inner">
-								<input type="text" name="your_email_1" id="your_email_1" class="input-text" required>
-								<span class="label">E-Mail</span>
-		  						<span class="border"></span>
-							</label>
-						</div>
-						<div class="form-row">
-							<label class="form-row-inner">
-								<input type="password" name="password_1" id="password_1" class="input-text" required>
+								<input type="password" name="log_pass" id="password_1" class="input-text" required>
 								<span class="label">Password</span>
 								<span class="border"></span>
 							</label>
 						</div>
-						<div class="form-row">
-							<label class="form-row-inner">
-								<input type="password" name="comfirm_password_1" id="comfirm_password_1" class="input-text" required>
-								<span class="label">Comfirm Password</span>
-								<span class="border"></span>
-							</label>
-						</div>
 						<div class="form-row-last">
-							<input type="submit" name="register" class="register" value="Sign In">
+							<input type="submit" name="signin" class="register" value="Sign In">
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-5">
+	<div class="col-sm-7">
           <div class="right-info">
             <ul>
               <li>
