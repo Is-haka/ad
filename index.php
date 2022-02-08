@@ -81,7 +81,7 @@
           <!-- <source src="assets/images/course-video.mp4" type="video/mp4" /> -->
       </div>
 
-      <div class="video-overlay header-text">
+      <div class="container header-text">
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
@@ -91,7 +91,7 @@
               <p>This is our official website that we will going to use it to run some of our programs and services so as to provide our teaching using the the modern way.</p>
               <p><em>Are you a parent or guardian of a child? if <b>"Yes"</b> please click the button below to create an account so that you can get some update in our Madaaris</em></p>
               <div class="main-button-red">
-                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                  <div class="scroll-to-section"><a href="#contact">Join Us </a></div>
               </div>
           </div>
               </div>
