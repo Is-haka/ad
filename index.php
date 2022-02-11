@@ -1,4 +1,5 @@
 <?php
+  session_start();
   require("connect.php");
   
 ?>
@@ -170,10 +171,11 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-heading">
-            <h2>Upcoming Parents Meetings</h2>
+            <h2>News and events</h2>
           </div>
         </div>
         <div class="col-lg-4">
+          <h2 class="text-light text-center m-2">events</h2>
           <div class="categories">
             <h4>Meeting Catgories</h4>
             <ul>
@@ -189,6 +191,7 @@
           </div>
         </div>
         <div class="col-lg-8">
+          <h2 class="text-light text-center m-2">news</h2>
           <div class="row">
             <div class="col-lg-6">
               <div class="meeting-item">
@@ -492,6 +495,12 @@
 					</div>
 				</div>
 				<form class="form-detail" action="./public/auth/register.php" method="post">
+          <?php echo (isset($_SESSION["exists"]))? "<span class='badge text-danger'>$_SESSION[exists]</span>" . session_destroy() : ""; ?>
+          <?php echo (isset($_SESSION["wrong"]))? "<span class='badge text-danger'>$_SESSION[wrong]</span>" . session_destroy() : ""; ?>
+          <?php echo (isset($_SESSION["success"]))? "<span class='badge text-success'>$_SESSION[success]</span>" . session_destroy() : ""; ?>
+          <?php echo (isset($_SESSION["notregistered"]))? "<span class='badge text-danger'>$_SESSION[notregistered]</span>" . session_destroy() : "";  ?>
+          <?php echo (isset($_SESSION["logproblem"]))? "<span class='badge text-danger'>$_SESSION[logproblem]</span>" . session_destroy() : ""; ?>
+          <?php echo (isset($_SESSION["wrongpass"]))? "<span class='badge text-danger'>$_SESSION[wrongpass]</span>" . session_destroy() : ""; ?>
 					<div class="tabcontent" id="sign-up">
 						<div class="form-row">
 							<label class="form-row-inner">
@@ -502,8 +511,8 @@
 						</div>
 						<div class="form-row">
 							<label class="form-row-inner">
-								<input type="text" name="email" id="your_email" class="input-text" required>
-								<span class="label">E-Mail</span>
+								<input type="text" name="username" id="your_uname" class="input-text" required>
+								<span class="label"> username <span class="badge">i.e. choose a name that you will be using when sign in</span></span>
 		  						<span class="border"></span>
 							</label>
 						</div>
@@ -559,8 +568,8 @@
 					<div class="tabcontent" id="sign-in">
 						<div class="form-row">
 							<label class="form-row-inner">
-								<input type="text" name="log_email" id="full_name_1" class="input-text" required>
-								<span class="label">Email address</span>
+								<input type="text" name="log_uname" id="full_name_1" class="input-text" required>
+								<span class="label">Username</span>
 		  						<span class="border"></span>
 							</label>
 						</div>
@@ -580,7 +589,7 @@
 		</div>
 	</div>
 	<div class="col-sm-7">
-          <div class="right-info">
+          <div class="right-info table text-sm">
             <ul>
               <li>
                 <h6>Phone Number</h6>
@@ -596,7 +605,7 @@
               </li>
               <li>
                 <h6>Website URL</h6>
-                <span>www.islamedu.co.tz</span>
+                <span>www.thaqaafat.com</span>
               </li>
             </ul>
           </div>

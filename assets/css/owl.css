@@ -146,8 +146,8 @@
  */
 .owl-carousel .owl-video-wrapper {
   position: relative;
-  height: 100%;
-  background: #000; }
+  height: 101%;
+  background: #001; }
 
 .owl-carousel .owl-video-play-icon {
   position: absolute;

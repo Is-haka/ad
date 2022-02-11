@@ -1112,7 +1112,7 @@ section.our-courses {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 140px;
+  padding-top: 190px;
   padding-bottom: 130px;
 }
 
@@ -1128,11 +1128,11 @@ section.our-courses {
   border-bottom: 1px solid #eee;
 }
 
-.our-courses .item .down-content .info {
+/* .our-courses .item .down-content .info {
   padding: 25px;
-}
+} */
 
-.our-courses .item .down-content .info ul li {
+/* .our-courses .item .down-content .info ul li {
   display: inline-block;
   margin-right: 1px;
 }
@@ -1140,16 +1140,16 @@ section.our-courses {
 .our-courses .item .down-content .info ul li i {
   color: #f5a425;
   font-size: 14px;
-}
+} */
 
-.our-courses .item .down-content .info span {
+/* .our-courses .item .down-content .info span {
   color: #a12c2f;
   font-size: 15px;
   font-weight: 600;
   text-align: right;
   display: inline-block;
   width: 100%;
-}
+} */
 
 .our-courses .owl-nav {
   text-align: center;
@@ -1399,7 +1399,7 @@ section.contact-us #contact button:hover {
 }
 
 section.contact-us .right-info {
-  background-color: #a12c2f;
+  background-color: rgba(167, 54, 54, 0.726);
   border-radius: 20px;
   padding: 40px;
 }
