@@ -1,3 +1,26 @@
+<?php
+
+  session_start();
+  require("../../connect.php");
+
+  if (isset($_SESSION["admin"])) {
+    $log_query = "SELECT * FROM users WHERE `username` = '$_SESSION[admin]' ";
+    $log_result = mysqli_query($db, $log_query);
+    if ($log_result) {
+      if (mysqli_num_rows($log_result) == 1) {
+        $fetchdata = mysqli_fetch_assoc($log_result);
+        // $trial = var_dump($fetchdata['username']);
+      }
+      else {
+        die("failed to get username");
+      }
+    }
+  }
+  else {
+    header("location: ../../index.php");
+  }
+
+?>
 <!--
 =========================================================
 * Material Dashboard 2 - v3.0.0
@@ -42,7 +65,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="../index.php">
         <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">LOGO NAME</span>
+        <span class="ms-1 font-weight-bold text-white">THAQAAFAT</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -102,7 +125,15 @@
           <h6 class="font-weight-bolder mb-0">Dashboard</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+        <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+          </div>
           <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-flex align-items-center">
+              <a href="../../public/auth/logout.php" class="nav-link text-body font-weight-bold px-0">
+                <i class="fa fa-sign-out me-sm-1"></i>
+                <span class="d-sm-inline d-none">logout</span>
+              </a>
+            </li>
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
                 <div class="sidenav-toggler-inner">
