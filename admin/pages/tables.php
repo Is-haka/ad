@@ -187,7 +187,7 @@
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-info shadow-info border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Students list</h6>
+                <h6 class="text-white text-capitalize ps-3">Teachers list</h6>
               </div>
             </div>
             <div class="card-body px-0 pb-2">
@@ -196,7 +196,7 @@
                   <thead>
                     <tr>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Parent or guider</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Teaching subject</th>
                       <!-- <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th> -->
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Registered</th>
                       <th class="text-secondary opacity-7"></th>
@@ -216,8 +216,8 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">Parent or Guider</p>
-                        <p class="text-xs text-secondary mb-0">Hamad Mbarouk</p>
+                        <p class="text-xs font-weight-bold mb-0">Subject</p>
+                        <p class="text-xs text-secondary mb-0">Tawheed</p>
                       </td>
                       <!-- <td class="align-middle text-center text-sm">
                         <span class="badge badge-sm bg-gradient-success">Online</span>
