@@ -44,7 +44,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="./index.php">
         <img src="./assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">LOGO NAME</span>
+        <span class="ms-1 font-weight-bold text-white"> THAQAAFAT </span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -191,29 +191,32 @@
         <div class="col-lg-4 col-md-6 mt-4 mb-4">
           <div class="card z-index-2 ">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-              <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+              <div class="bg-gradient-light shadow-light border-radius-lg py-3 pe-1">
                 <div class="chart">
-                  <i class="material-icons opacity-10">star</i>
+                  <!-- <i class="material-icons opacity-10">star</i> -->
+                  <img src="./assets/img/products/product-details-4.jpg" width="320" height="225" alt="">
                 </div>
               </div>
             </div>
             <div class="card-body">
               <h6 class="mb-0 ">Student of the year</h6>
               <p class="text-sm ">Winner of Quran tournament</p>
-              <hr class="dark horizontal">
+              <!-- <hr class="dark horizontal"> -->
               <div class="d-flex ">
                 <i class="material-icons text-sm my-auto me-1">star_border</i>
                 <p class="mb-0 text-sm"> 2021 Quran tournament </p>
               </div>
+              <a href="#" class="btn btn-sm m-1 bg-danger text-light">edit</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 mt-4 mb-3">
           <div class="card z-index-2 ">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-              <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
+              <div class="bg-gradient-light shadow-light border-radius-lg py-3 pe-1">
                 <div class="chart">
-                  <i class="material-icons text-sm my-auto me-1">event</i>
+                  <!-- <i class="material-icons text-sm my-auto me-1">event</i> -->
+                  <img src="./assets/img/products/product-2-min.jpg" width="320" height="225" alt="">
                 </div>
               </div>
             </div>
@@ -225,6 +228,7 @@
                 <i class="material-icons text-sm my-auto me-1">event</i>
                 <p class="mb-0 text-sm">just updated</p>
               </div>
+              <a href="#" class="btn btn-sm m-1 bg-danger text-light">edit</a>
             </div>
           </div>
         </div>

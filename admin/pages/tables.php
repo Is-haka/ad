@@ -42,7 +42,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
         <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">Material Dashboard 2</span>
+        <span class="ms-1 font-weight-bold text-white">THAQAAFAT</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -171,7 +171,7 @@
                         <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                       </td>
                       <td class="align-middle">
-                      <a href="javascript:;" class="text-warning font-weight-bold text-xs p-1 border-radius-xl" data-toggle="tooltip" data-original-title="Edit user">
+                      <a href="javascript:;" class="text-warning btn font-weight-bold text-xs p-1 border-radius-xl" data-toggle="tooltip" data-original-title="Edit user">
                         <i class="fa fa-edit text-xs"></i>
                         </a>
                       </td>
@@ -226,7 +226,7 @@
                         <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-warning font-weight-bold text-xs p-1 border-radius-xl" data-toggle="tooltip" data-original-title="Edit user">
+                        <a href="javascript:;" class="text-warning btn font-weight-bold text-xs p-1 border-radius-xl" data-toggle="tooltip" data-original-title="Edit user">
                         <i class="fa fa-edit text-xs"></i>
                         </a>
                       </td>
@@ -282,7 +282,7 @@
                         </div>
                       </td>
                       <td class="align-middle">
-                        <button class="btn btn-link btn-sm text-info mb-0">
+                        <button class="btn btn-sm text-info mb-0">
                           <i class="fa fa-info text-xs"></i>
                         </button>
                       </td>
@@ -338,15 +338,15 @@
                         </div>
                       </td>
                       <td class="align-middle">
-                      <button class="btn btn-link btn-sm text-warning mb-0">
+                      <a href="#" class="btn btn-sm text-warning mb-0">
                           <i class="fa fa-edit text-xs"></i>
-                        </button>
-                        <button class="btn btn-sm btn-link text-info mb-0">
+                      </a>
+                        <a href="#" class="btn btn-sm text-info mb-0">
                           <i class="fa fa-send text-xs"></i>
-                        </button>
-                        <button class="btn btn-link btn-sm text-danger mb-0">
+                        </a>
+                        <a href="#" class="btn btn-sm text-danger mb-0">
                           <i class="fa fa-trash text-xs"></i>
-                        </button>
+                        </a>
                       </td>
                     </tr>
                   </tbody>
