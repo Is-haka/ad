@@ -188,13 +188,13 @@
         </div>
       </div>
       <div class="row mt-4">
-        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+        <div class="col-lg-3 col-md-6 mt-4 mb-4">
           <div class="card z-index-2 ">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
               <div class="bg-gradient-light shadow-light border-radius-lg py-3 pe-1">
-                <div class="chart">
+                <div class="p-relative text-center">
                   <!-- <i class="material-icons opacity-10">star</i> -->
-                  <img src="./assets/img/products/product-details-4.jpg" width="320" height="225" alt="">
+                  <img src="./assets/img/products/product-details-4.jpg" width="225" height="225" alt="" style="border-radius: 100%;">
                 </div>
               </div>
             </div>
@@ -210,13 +210,13 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mt-4 mb-3">
+        <div class="col-lg-3 mt-4 mb-3">
           <div class="card z-index-2 ">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
               <div class="bg-gradient-light shadow-light border-radius-lg py-3 pe-1">
-                <div class="chart">
+                <div class="border-radius-xl p-relative text-center">
                   <!-- <i class="material-icons text-sm my-auto me-1">event</i> -->
-                  <img src="./assets/img/products/product-2-min.jpg" width="320" height="225" alt="">
+                  <img src="./assets/img/products/product-2-min.jpg" width="225" height="225" alt="" style="border-radius: 100%;">
                 </div>
               </div>
             </div>
