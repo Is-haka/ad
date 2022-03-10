@@ -359,7 +359,7 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 made with <i class="fa fa-heart"></i> by
-                <a href="https://www.is-haka.github.io" class="font-weight-bold" target="_blank">Is-haka Pro.</a>
+                <a href="https://is-haka.github.io" class="font-weight-bold" target="_blank">Is-haka Pro.</a>
               </div>
             </div>
             <div class="col-lg-3">
