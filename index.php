@@ -170,8 +170,17 @@
   </section>
 
   <?php
-    $event = 2;
-    echo ($event !== 1)? "
+
+  $qnews = "SELECT * FROM news";
+  $rnews = mysqli_query($db, $qnews);
+
+  $qevents = "SELECT * FROM events";
+  $revents = mysqli_query($db, $qevents);
+
+  if (mysqli_num_rows($rnews) > 0) {
+    if (mysqli_num_rows($revents) > 0) {
+      $event_news = "on";
+      echo ($event_news !== true)? "
     
     <section class='upcoming-meetings' id='meetings'>
     <div class='container'>
@@ -184,16 +193,13 @@
         <div class='col-lg-4'>
           <h2 class='text-light text-center m-2'>events</h2>
           <div class='categories'>
-            <h4>Meeting Catgories</h4>
+            <h4 class='text-center'>All events</h4>
             <ul>
-              <li><a href='#'>Sed tempus enim leo</a></li>
-              <li><a href='#'>Aenean molestie quis</a></li>
-              <li><a href='#'>Cras et metus vestibulum</a></li>
-              <li><a href='#'>Nam et condimentum</a></li>
-              <li><a href='#'>Phasellus nec sapien</a></li>
+              <li><a href='#'>Maulid</a></li><br>
+              <li><a href='#'>Quran Tournament</a></li>
             </ul>
             <div class='main-button-red'>
-              <a href='meetings.php'>All Upcoming Meetings</a>
+              <a href='#'>Other events</a>
             </div>
           </div>
         </div>
@@ -206,30 +212,47 @@
                   <div class='price'>
                     
                   </div>
-                  <a href='meeting-details.php'><img src='assets/images/meeting-01.jpg' alt='New Lecturer Meeting'></a>
+                  <a href='#'><img src='assets/images/meeting-01.jpg' alt='New Lecturer Meeting'></a>
                 </div>
                 <div class='down-content'>
                   <div class='date'>
                     <h6>Nov <span>10</span></h6>
                   </div>
-                  <a href='meeting-details.php'><h4>New Lecturers Meeting</h4></a>
-                  <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                  <a href='#'><h4>The arrival of TAMSYA</h4></a>
+                  <p>He congrat us on all the things we did and accomplished recently since we open.</p>
                 </div>
               </div>
             </div>
-            <div class='col-lg-6'>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+    " : "";
+
+    }
+  }
+
+  ?>
+  
+
+
+
+  <!-- <div class='col-lg-6'>
               <div class='meeting-item'>
                 <div class='thumb'>
                   <div class='price'>
-                    <span>$36.00</span>
+
                   </div>
-                  <a href='meeting-details.php'><img src='assets/images/meeting-02.jpg' alt='Online Teaching'></a>
+                  <a href='#'><img src='assets/images/meeting-02.jpg' alt='Online Teaching'></a>
                 </div>
                 <div class='down-content'>
                   <div class='date'>
                     <h6>Nov <span>24</span></h6>
                   </div>
-                  <a href='meeting-details.php'><h4>Online Teaching Techniques</h4></a>
+                  <a href='#'><h4>Online Teaching Techniques</h4></a>
                   <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
                 </div>
               </div>
@@ -240,13 +263,13 @@
                   <div class='price'>
                     <span>$14.00</span>
                   </div>
-                  <a href='meeting-details.php'><img src='assets/images/meeting-03.jpg' alt='Higher Education'></a>
+                  <a href='#'><img src='assets/images/meeting-03.jpg' alt='Higher Education'></a>
                 </div>
                 <div class='down-content'>
                   <div class='date'>
                     <h6>Nov <span>26</span></h6>
                   </div>
-                  <a href='meeting-details.php'><h4>Higher Education Conference</h4></a>
+                  <a href='#'><h4>Higher Education Conference</h4></a>
                   <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
                 </div>
               </div>
@@ -257,27 +280,20 @@
                   <div class='price'>
                     <span>$48.00</span>
                   </div>
-                  <a href='meeting-details.php'><img src='assets/images/meeting-04.jpg' alt='Student Training'></a>
+                  <a href='#'><img src='assets/images/meeting-04.jpg' alt='Student Training'></a>
                 </div>
                 <div class='down-content'>
                   <div class='date'>
                     <h6>Nov <span>30</span></h6>
                   </div>
-                  <a href='meeting-details.php'><h4>Student Training Meetup</h4></a>
+                  <a href='#'><h4>Student Training Meetup</h4></a>
                   <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-    
-    " : "";
+            </div> -->
 
-  ?>
-  
+
+
   <!-- <section class="apply-now" id="apply">
     <div class="container">
       <div class="row">
