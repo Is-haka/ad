@@ -1,3 +1,26 @@
+<?php
+
+  session_start();
+  require("../../connect.php");
+
+  if (isset($_SESSION["admin"])) {
+    $log_query = "SELECT * FROM users WHERE `username` = '$_SESSION[admin]' ";
+    $log_result = mysqli_query($db, $log_query);
+    if ($log_result) {
+      if (mysqli_num_rows($log_result) == 1) {
+        $fetchdata = mysqli_fetch_assoc($log_result);
+        // $trial = var_dump($fetchdata['username']);
+      }
+      else {
+        die("failed to get username");
+      }
+    }
+  }
+  else {
+    header("location: ../../index.php");
+  }
+
+?>
 <!--
 =========================================================
 * Material Dashboard 2 - v3.0.0
