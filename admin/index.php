@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  require("../../connect.php");
+  require("../connect.php");
 
   if (isset($_SESSION["admin"])) {
     $log_query = "SELECT * FROM users WHERE `username` = '$_SESSION[admin]' ";
