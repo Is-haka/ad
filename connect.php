@@ -15,6 +15,6 @@
         // $db_userpass = "";
         // $db_host = "localhost";
 
-        $db=mysqli_connect($db_host, $db_username, $db_userpass, $db_name) or die("database connection failed");
+        $db =mysqli_connect($db_host, $db_username, $db_userpass, $db_name) or die("database connection failed");
 
 ?>
