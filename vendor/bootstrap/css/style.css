@@ -2,7 +2,12 @@
     padding: none !important;
 }
 .welcome{
-    background: linear-gradient(-45deg, brown, rgb(88, 28, 28)) !important;
+    /* background: linear-gradient(-45deg, brown, rgb(88, 28, 28)) !important; */
+    background: url(../../../assets/images/un2.jpg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 #whead{
     color: rgb(243, 243, 243) !important;
