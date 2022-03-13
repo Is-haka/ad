@@ -97,7 +97,7 @@
               <p>This is our official website that we will going to use it to run some of our programs and services so as to provide our teaching using the the modern way.</p>
               <p><em>Are you a parent or guardian of a child? if <b>"Yes"</b> please click the button below to create an account so that you can get some update in our Madaaris</em></p>
               <div class="main-button-red">
-                  <div class="scroll-to-section"><a href="#contact"> create account </a></div>
+                  <div class="scroll-to-section"><a href="#contact"> signup or login  </a></div>
               </div>
           </div>
               </div>
@@ -171,38 +171,55 @@
 
   <?php
 
-  $qnews = "SELECT * FROM news";
-  $rnews = mysqli_query($db, $qnews);
+$qevents = "SELECT * FROM events";
+$revents = mysqli_query($db, $qevents);
+  if (mysqli_num_rows($revents) > 0) {
+    ?>
+  <section class='upcoming-meetings' id='meetings'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12'>
+            <div class='section-heading'>
+              <h2>News and events</h2>
+            </div>
+          </div>
+          <div class='col-lg-4'>
+            <h2 class='text-light text-center m-2'>events</h2>
+            <div class='categories'>
+              <h4 class='text-center'>All events</h4>
+              <ul>
+    <?php
+    while ($row = mysqli_fetch_assoc($revents)) { ?>
+      
+      <li><a href='#'> <?php echo $row["event_names"]; ?> </a></li><br>
 
-  $qevents = "SELECT * FROM events";
-  $revents = mysqli_query($db, $qevents);
-
-  if (mysqli_num_rows($rnews) > 0) {
-    if (mysqli_num_rows($revents) > 0) {
-      $event_news = "on";
-      echo ($event_news !== true)? "
-    
+    <?php
+    }
+    ?>
+      </ul>
+        <div class='main-button-red'>
+          <a href='#'>Other events</a>
+        </div>
+      </div>
+    </div>
+    <?php
+  }
+  else {
+    echo "
     <section class='upcoming-meetings' id='meetings'>
     <div class='container'>
       <div class='row'>
-        <div class='col-lg-12'>
-          <div class='section-heading'>
-            <h2>News and events</h2>
-          </div>
-        </div>
-        <div class='col-lg-4'>
-          <h2 class='text-light text-center m-2'>events</h2>
-          <div class='categories'>
-            <h4 class='text-center'>All events</h4>
-            <ul>
-              <li><a href='#'>Maulid</a></li><br>
-              <li><a href='#'>Quran Tournament</a></li>
-            </ul>
-            <div class='main-button-red'>
-              <a href='#'>Other events</a>
-            </div>
-          </div>
-        </div>
+    ";
+  }
+  $qnews = "SELECT * FROM news";
+  $rnews = mysqli_query($db, $qnews);
+
+
+    if (mysqli_num_rows($rnews) > 0) {
+      $row = mysqli_fetch_assoc($rnews);
+      echo "
+    
+    
         <div class='col-lg-8'>
           <h2 class='text-light text-center m-2'>news</h2>
           <div class='row'>
@@ -216,10 +233,10 @@
                 </div>
                 <div class='down-content'>
                   <div class='date'>
-                    <h6>Nov <span>10</span></h6>
+                    <h6>$row[month] <span>$row[date]</span></h6>
                   </div>
-                  <a href='#'><h4>The arrival of TAMSYA</h4></a>
-                  <p>He congrat us on all the things we did and accomplished recently since we open.</p>
+                  <a href='#'><h4>$row[brief_news]</h4></a>
+                  <p>$row[contents]</p>
                 </div>
               </div>
             </div>
@@ -230,10 +247,10 @@
     </div>
   </section>
     
-    " : "";
+    ";
 
     }
-  }
+
 
   ?>
   
