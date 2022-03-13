@@ -86,7 +86,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
-            <span class="nav-link-text ms-1">Tables</span>
+            <span class="nav-link-text ms-1">All users</span>
           </a>
         </li>
         <li class="nav-item">
@@ -213,45 +213,23 @@
       <div class="row mt-4">
         <div class="col-lg-3 col-md-6 mt-4 mb-4">
           <div class="card z-index-2 ">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+            <!-- <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
               <div class="bg-gradient-light shadow-light border-radius-lg py-3 pe-1">
                 <div class="p-relative text-center">
-                  <!-- <i class="material-icons opacity-10">star</i> -->
-                  <img src="./assets/img/products/product-details-4.jpg" width="225" height="225" alt="" style="border-radius: 100%;">
+                  <i class="material-icons opacity-10">star</i>
+                  <img src="../assets/img/products/product-details-4.jpg" width="225" height="225" alt="" style="border-radius: 100%;">
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="card-body">
-              <h6 class="mb-0 ">Student of the year</h6>
-              <p class="text-sm ">Winner of Quran tournament</p>
+              <h6 class="mb-0 ">UPDATE NEWS AND EVENTS</h6>
+              <!-- <p class="text-sm ">Winner of Quran tournament</p> -->
               <!-- <hr class="dark horizontal"> -->
               <div class="d-flex ">
                 <i class="material-icons text-sm my-auto me-1">star_border</i>
-                <p class="mb-0 text-sm"> 2021 Quran tournament </p>
+                <!-- <p class="mb-0 text-sm"> 2021 Quran tournament </p> -->
               </div>
-              <a href="#" class="btn btn-sm m-1 bg-danger text-light">edit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 mt-4 mb-3">
-          <div class="card z-index-2 ">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-              <div class="bg-gradient-light shadow-light border-radius-lg py-3 pe-1">
-                <div class="border-radius-xl p-relative text-center">
-                  <!-- <i class="material-icons text-sm my-auto me-1">event</i> -->
-                  <img src="./assets/img/products/product-2-min.jpg" width="225" height="225" alt="" style="border-radius: 100%;">
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <h6 class="mb-0 ">Upcoming event</h6>
-              <p class="text-sm ">A parent meeting event</p>
-              <hr class="dark horizontal">
-              <div class="d-flex ">
-                <i class="material-icons text-sm my-auto me-1">event</i>
-                <p class="mb-0 text-sm">just updated</p>
-              </div>
-              <a href="#" class="btn btn-sm m-1 bg-danger text-light">edit</a>
+              <a href="./pages/news_event.php" class="btn btn-sm m-1 bg-danger text-light ">edit</a>
             </div>
           </div>
         </div>
@@ -278,7 +256,7 @@
             <div class="col-lg-3">
               <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                 <li class="nav-item">
-                  <a href="#" class="nav-link text-muted" target="_blank">LOGO NAME</a>
+                  <a href="#" class="nav-link text-muted" target="_blank">THAQAAFAT AL ISLAAMIYYA</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link text-muted" target="_blank">About Us</a>
