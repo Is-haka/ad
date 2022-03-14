@@ -67,7 +67,8 @@
                                   <li><a href="meeting-details.php">Meeting Details</a></li>
                               </ul>
                           </li> -->
-                          <li class="scroll-to-section"><a href="#courses">Courses</a></li> 
+                          <li class="scroll-to-section"><a href="#news_event">news & events</a></li>
+                          <li class="scroll-to-section"><a href="#courses">Courses</a></li>
                           <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
                       </ul>        
                       <a class='menu-trigger'>
@@ -175,7 +176,7 @@ $qevents = "SELECT * FROM events";
 $revents = mysqli_query($db, $qevents);
   if (mysqli_num_rows($revents) > 0) {
     ?>
-  <section class='upcoming-meetings' id='meetings'>
+  <section class='upcoming-meetings' id='news_event'>
       <div class='container'>
         <div class='row'>
           <div class='col-lg-12'>
@@ -216,38 +217,42 @@ $revents = mysqli_query($db, $qevents);
 
 
     if (mysqli_num_rows($rnews) > 0) {
-      $row = mysqli_fetch_assoc($rnews);
-      echo "
+      ?>
     
     
         <div class='col-lg-8'>
           <h2 class='text-light text-center m-2'>news</h2>
           <div class='row'>
-            <div class='col-lg-6'>
+            <?php
+            
+            while ($newest = mysqli_fetch_assoc($rnews)) {
+              ?>
+              <div class='col-lg-6'>
               <div class='meeting-item'>
                 <div class='thumb'>
                   <div class='price'>
-                    
                   </div>
-                  <a href='#'><img src='assets/images/meeting-01.jpg' alt='New Lecturer Meeting'></a>
+                  <a href='#'><img src='./admin/assets/img/crop.png' alt='New Lecturer Meeting'></a>
                 </div>
                 <div class='down-content'>
-                  <div class='date'>
-                    <h6>$row[month] <span>$row[date]</span></h6>
+                  <div class='date bg-light p-3'>
+                  <h6> <?php echo $newest["month"]; ?> <span><?php echo $newest["date"]; ?></span></h6>
                   </div>
-                  <a href='#'><h4>$row[brief_news]</h4></a>
-                  <p>$row[contents]</p>
+                  <a href='#'><h4><?php echo $newest["brief_news"]; ?></h4></a>
+                  <p><?php echo $newest["contents"]; ?></p>
                 </div>
               </div>
             </div>
+              <?php
+            }
             
+            ?>
           </div>
         </div>
       </div>
     </div>
   </section>
-    
-    ";
+    <?php
 
     }
 
