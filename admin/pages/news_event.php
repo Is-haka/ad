@@ -163,7 +163,7 @@
                 <div class="col-md-6 mt-4">
                     <div class="card bg-secondary">
                         <div class="card-header pb-0 px-3 d-flex p-relative justify-content-around">
-                            <h6 class="mb-0">UPDATE NEWS</h6>
+                            <h6 class="mb-0">NEWS</h6>
                             <a class="btn bg-gradient-dark mb-3" href="./news.php"><i
                                     class="material-icons text-sm">add</i>&nbsp;&nbsp;Create new news</a>
                         </div>
@@ -207,7 +207,7 @@
   <div class="col-md-6 mt-4">
     <div class="card bg-info">
         <div class="card-header pb-0 px-3 d-flex p-relative justify-content-around">
-            <h6 class="mb-0">UPDATE EVENTS</h6>
+            <h6 class="mb-0">EVENTS</h6>
             <a class="btn bg-gradient-dark mb-3" href="event.php"><i
                     class="material-icons text-sm">add</i>&nbsp;&nbsp;Create new event</a>
         </div>
