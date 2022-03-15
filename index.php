@@ -235,7 +235,7 @@ $revents = mysqli_query($db, $qevents);
                   <a href='#'><img src='./admin/assets/img/crop.png' alt='New Lecturer Meeting'></a>
                 </div>
                 <div class='down-content'>
-                  <div class='date bg-light p-3'>
+                  <div class='date'>
                   <h6> <?php echo $newest["month"]; ?> <span><?php echo $newest["date"]; ?></span></h6>
                   </div>
                   <a href='#'><h4><?php echo $newest["brief_news"]; ?></h4></a>
