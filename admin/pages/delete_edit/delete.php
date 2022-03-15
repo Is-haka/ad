@@ -14,5 +14,17 @@
             echo "something wrong here";
         }
     }
+    elseif(isset($_GET["id_news"])) {
+
+        $news = "DELETE FROM news WHERE id = $_GET[id_news] ";
+        $rnews = mysqli_query($db, $news);
+        if ($rnews) {
+            echo "Deleted";
+            header("location: ../news_event.php");
+        }
+        else {
+            echo "something wrong here";
+        }
+    }
 
 ?>
