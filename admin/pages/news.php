@@ -176,7 +176,7 @@
                                       $pquery = "INSERT INTO news(`brief_news`, `contents`, `month`, `date`) VALUES('$heading', '$content', '$month', '$date')";
                                       $presult = mysqli_query($db, $pquery);
                                       if ($presult) {
-                                          echo "<span class='badge badge-sm text-success'>event posted successfully</span>";
+                                          echo "<span class='badge badge-sm text-success'>news posted successfully</span>";
                                       }
                                       else {
                                           echo "<span class='badge badge-sm text-danger'>Error posting</span>";
