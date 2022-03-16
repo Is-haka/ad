@@ -10,3 +10,8 @@
 #whead{
     color: rgb(243, 243, 243) !important;
 }
+.caption{
+    background: linear-gradient(transparent, #1f262c6e, #1f262c6e, #1f262c6e, #1f262c6e, transparent, transparent) !important;
+    padding: 10px;
+    border-radius: 20px;
+}

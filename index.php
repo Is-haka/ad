@@ -530,6 +530,10 @@ $revents = mysqli_query($db, $qevents);
   <section class="contact-us" id="contact">
     <div class="container">
       <div class="row">
+      <div class='section-heading'>
+              <h2>Contacts</h2>
+            </div>
+          </div>
         <div class="col-sm-12 align-self-center">
           <div class="row respo">
             <div class="col-sm-5 ">
@@ -652,10 +656,10 @@ $revents = mysqli_query($db, $qevents);
                 <h6>Physical Address</h6>
                 <span>Arusha, Tanzania</span>
               </li>
-              <li>
+              <!-- <li>
                 <h6>Website URL</h6>
                 <span>www.thaqaafat.com</span>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
