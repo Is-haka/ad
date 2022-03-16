@@ -175,13 +175,13 @@
                             if ($content != NULL) {
                                 if ($date != NULL) {
                                   if ($month != NULL) {
-                                      $pquery = "INSERT INTO news(`brief_news`, `contents`, `month`, `date`) VALUES('$heading', '$content', '$month', '$date')";
-                                      $presult = mysqli_query($db, $pquery);
-                                      if ($presult) {
-                                          echo "<span class='badge badge-sm text-success'>news posted successfully</span>";
+                                    $nquery = ("UPDATE `news` SET `brief_news` = '$heading', `contents` = '$content', `month` = '$month', `date` = '$date' WHERE `news`.`id` = $_GET[news_edit]"); 
+                                      $nresult = mysqli_query($db, $nquery);
+                                      if ($nresult) {
+                                          echo "<span class='badge badge-sm text-success'>news updated successfully</span>";
                                       }
                                       else {
-                                          echo "<span class='badge badge-sm text-danger'>Error posting</span>";
+                                          echo "<span class='badge badge-sm text-danger'>Error editing</span>";
                                       }
                                   }
                                   else{
@@ -200,20 +200,27 @@
                             echo "<span class='badge badge-sm badge-danger text-danger'>Heading can't be empty</span>";
                         }
                     }
+                    if (isset($_GET["news_edit"])) {
+                      $enews = "SELECT * FROM news WHERE id = $_GET[news_edit]";
+                      $er_news = mysqli_query($db, $enews);
+                      if($er_news){
+                        $list_news = mysqli_fetch_assoc($er_news);
+                      }
+                    }
                 ?>
                     <form action="" method="post">
                     <div class="input-group input-group-outline my-3">
-                    <label class="form-label">Heading of the news</label>
-                    <input type="text" name="heading" class="form-control">
+                    <label class="form-label"></label>
+                    <input type="text" name="heading" value="<?php echo $list_news["brief_news"]; ?>" class="form-control">
                   </div>
                   <div class="input-group input-group-outline my-3">
-                    <label class="form-label">Date</label>
-                    <input type="number" name="date" class="form-control">
+                    <label class="form-label"></label>
+                    <input type="number" name="date" value="<?php echo $list_news["date"]; ?>" class="form-control">
                   </div>
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label"></label>
                     <select name="month" class="form-control">
-                    <option value="">month</option>
+                    <option value="<?php echo $list_news["month"]; ?>"><?php echo $list_news["month"]; ?></option>
                     <option value="JAN">JANUARY</option>
                     <option value="FEB">FEBRUARY</option>
                     <option value="MAR">MARCH</option>
@@ -230,7 +237,7 @@
                   </div>
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label"></label>
-                    <textarea class="form-control" name="content" id="" cols="30" rows="10" placeholder="contents of the news"></textarea>
+                    <textarea class="form-control" name="content" id="" cols="30" rows="10" placeholder="contents of the news"><?php echo $list_news["contents"]; ?></textarea>
                   </div>
                   <div class="">
                     <a href="./news_event.php" class="btn btn-success btn-sm">back</a>
@@ -500,18 +507,26 @@
                 <div class="form form-sm p-2">
 
                 <?php
+                if (isset($_GET["event_edit"])) {
+                  $eevent = "SELECT * FROM events WHERE id = $_GET[event_edit]";
+                  $er_event = mysqli_query($db, $eevent);
+                  if ($er_event) {
+                    $list_event = mysqli_fetch_assoc($er_event);
+                  }
+                }
                     if (isset($_POST["post"])) {
                         $heading = $_POST["heading"];
                         $content = $_POST["content"];
                         if ($heading != NULL) {
                             if ($content != NULL) {
-                                $pquery = "INSERT INTO events(`event_names`, `contents`) VALUES('$heading', '$content')";
+                                $pquery = ("UPDATE `events` SET `event_names` = '$heading', `contents` = '$content' WHERE `id` = $_GET[event_edit] ");
                                 $presult = mysqli_query($db, $pquery);
                                 if ($presult) {
-                                    echo "<span class='badge badge-sm text-success'>event posted successfully</span>";
+                                    echo "<span class='badge badge-sm text-success'>event edited successfully</span>";
                                 }
                                 else {
-                                    echo "<span class='badge badge-sm text-danger'>Error posting</span>";
+                                    echo "<span class='badge badge-sm text-danger'>Error editing a post</span>";
+                                    // var_dump($_GET["event_edit"]);
                                 }
                             }
                             else {
@@ -525,12 +540,12 @@
                 ?>
                     <form action="" method="post">
                     <div class="input-group input-group-outline my-3">
-                    <label class="form-label">Heading of the event</label>
-                    <input type="text" name="heading" class="form-control">
+                    <label class="form-label"></label>
+                    <input type="text" name="heading" value="<?php echo $list_event["event_names"]; ?>" class="form-control" placeholder="Heading of the event">
                   </div>
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label"></label>
-                    <textarea class="form-control" name="content" id="" cols="30" rows="10" placeholder="contents of the event"></textarea>
+                    <textarea class="form-control" name="content" id="" cols="30" rows="10" placeholder="contents of the event"><?php echo $list_event["contents"]; ?></textarea>
                   </div>
                   <div class="">
                     <a href="./news_event.php" class="btn btn-success btn-sm">back</a>
