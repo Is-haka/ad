@@ -232,7 +232,7 @@
                   <a class="btn btn-link text-danger text-gradient px-3 mb-0"
                       href="./delete.php?id='<?php echo $list["id"]; ?>'"><i
                           class="material-icons text-sm me-2">delete</i>Delete</a>
-                  <a class="btn btn-link text-dark px-3 mb-0" href="#"><i
+                  <a class="btn btn-link text-dark px-3 mb-0" href="./edit.php?event_edit='<?php echo $list["id"]; ?>'"><i
                           class="material-icons text-sm me-2">edit</i>Edit</a>
               </div>
           </li>
