@@ -1,5 +1,5 @@
 <?php
-    require_once("../../../connect.php");
+    require_once("../../connect.php");
 
     if (isset($_GET["id"])) {
         $id = $_GET["id"];
@@ -8,7 +8,7 @@
         $revent = mysqli_query($db, $event);
         if ($revent) {
             echo "Deleted";
-            header("location: ../news_event.php");
+            header("location: ./news_event.php");
         }
         else {
             echo "something wrong here";
@@ -20,7 +20,7 @@
         $rnews = mysqli_query($db, $news);
         if ($rnews) {
             echo "Deleted";
-            header("location: ../news_event.php");
+            header("location: ./news_event.php");
         }
         else {
             echo "something wrong here";
