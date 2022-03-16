@@ -186,9 +186,9 @@
               </div>
               <div class="ms-auto text-end">
                   <a class="btn btn-link text-danger text-gradient px-3 mb-0"
-                      href="./delete_edit/delete.php?id_news='<?php echo $nlist["id"]; ?>'"><i
+                      href="./delete.php?id_news='<?php echo $nlist["id"]; ?>'"><i
                           class="material-icons text-sm me-2">delete</i>Delete</a>
-                  <a class="btn btn-link text-dark px-3 mb-0" href="#"><i
+                  <a class="btn btn-link text-dark px-3 mb-0" href="./edit.php?news_edit='<?php echo $nlist["id"]; ?>'"><i
                           class="material-icons text-sm me-2">edit</i>Edit</a>
               </div>
           </li>
@@ -230,7 +230,7 @@
               </div>
               <div class="ms-auto text-end">
                   <a class="btn btn-link text-danger text-gradient px-3 mb-0"
-                      href="./delete_edit/delete.php?id='<?php echo $list["id"]; ?>'"><i
+                      href="./delete.php?id='<?php echo $list["id"]; ?>'"><i
                           class="material-icons text-sm me-2">delete</i>Delete</a>
                   <a class="btn btn-link text-dark px-3 mb-0" href="#"><i
                           class="material-icons text-sm me-2">edit</i>Edit</a>
