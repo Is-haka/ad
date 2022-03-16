@@ -641,7 +641,7 @@ $revents = mysqli_query($db, $qevents);
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-7">
+	<div class="col-sm-6">
           <div class="right-info table text-sm">
             <ul>
               <li>
