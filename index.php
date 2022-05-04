@@ -646,7 +646,7 @@ $revents = mysqli_query($db, $qevents);
             <ul>
               <li>
                 <h6>Phone Number</h6>
-                <span>0715 641 114</span>
+                <span>+255 715 641 114</span>
               </li>
               <li>
                 <h6>Email Address</h6>
@@ -654,7 +654,7 @@ $revents = mysqli_query($db, $qevents);
               </li>
               <li>
                 <h6>Physical Address</h6>
-                <span>Arusha, Tanzania</span>
+                <span>Arusha - Mianzini, Tanzania</span>
               </li>
               <!-- <li>
                 <h6>Website URL</h6>
