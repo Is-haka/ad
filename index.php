@@ -52,7 +52,7 @@
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
                       <a href="index.php" class="logo">
-                      LOGO
+                      THAQ.<span class="text-warning">IS</span>
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
