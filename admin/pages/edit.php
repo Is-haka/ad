@@ -175,7 +175,7 @@
                             if ($content != NULL) {
                                 if ($date != NULL) {
                                   if ($month != NULL) {
-                                    $nquery = ("UPDATE `news` SET `brief_news` = '$heading', `contents` = '$content', `month` = '$month', `date` = '$date' WHERE `news`.`id` = $_GET[news_edit]"); 
+                                    $nquery = ("UPDATE `news` SET `news heading` = '$heading', `news content` = '$content', `month` = '$month', `date` = '$date' WHERE `news`.`id` = $_GET[news_edit]"); 
                                       $nresult = mysqli_query($db, $nquery);
                                       if ($nresult) {
                                           echo "<span class='badge badge-sm text-success'>news updated successfully</span>";
@@ -211,7 +211,7 @@
                     <form action="" method="post">
                     <div class="input-group input-group-outline my-3">
                     <label class="form-label"></label>
-                    <input type="text" name="heading" value="<?php echo $list_news["brief_news"]; ?>" class="form-control">
+                    <input type="text" name="heading" value="<?php echo $list_news["news heading"]; ?>" class="form-control">
                   </div>
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label"></label>

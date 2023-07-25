@@ -34,13 +34,24 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <style>
+    .invis {
+      display: none;
+      transition: all .4s ease-in-out;
+    }
+
+    .vis {
+      display: block;
+      transition: all .4s ease-in-out;
+    }
+  </style>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href="./dashboard.php" >
+      <a class="navbar-brand m-0" href="./dashboard.php">
         <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold text-white">THAQAAFAT</span>
       </a>
@@ -56,13 +67,31 @@
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="../pages/tables.php">
+        <li class="nav-item text-center">
+          <span class="nav-link active bg-gradient-primary text-white cursor-pointer" id="use">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
-            <span class="nav-link-text ms-1">All users</span>
-          </a>
+            <span class="nav-link-text ms-1">Users</span>
+          </span>
+        </li>
+        <li class="nav-item hidden_ invis">
+          <a href="../pages/tables.php" class="nav-link text-white bg-gradient-secondary">All users</a>
+          <a href="#" class="nav-link text-white bg-gradient-secondary">Students</a>
+          <a href="#" class="nav-link text-white bg-gradient-secondary">Teachers</a>
+          <a href="#" class="nav-link text-white bg-gradient-secondary">Graduators</a>
+        </li>
+        <li class="nav-item text-center">
+          <span class="nav-link text-white cursor-pointer" id="reg">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">table_view</i>
+            </div>
+            <span class="nav-link-text ms-1">Register</span>
+          </span>
+        </li>
+        <li class="nav-item hidden invis">
+          <a href="#" class="nav-link text-white bg-gradient-secondary">Register Student</a>
+          <a href="#" class="nav-link text-white bg-gradient-secondary">Register Teacher</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="#">
@@ -102,7 +131,7 @@
           </div>
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item d-flex align-items-center">
-            <a href="../../public/auth/logout.php" class="nav-link text-body font-weight-bold px-0">
+              <a href="../../public/auth/logout.php" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-sign-out me-sm-1"></i>
                 <span class="d-sm-inline d-none">logout</span>
               </a>
@@ -148,7 +177,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                  <tr>
+                    <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
@@ -171,8 +200,8 @@
                         <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                       </td>
                       <td class="align-middle">
-                      <a href="javascript:;" class="text-warning btn font-weight-bold text-xs p-1 border-radius-xl" data-toggle="tooltip" data-original-title="Edit user">
-                        <i class="fa fa-edit text-xs"></i>
+                        <a href="javascript:;" class="text-warning btn font-weight-bold text-xs p-1 border-radius-xl" data-toggle="tooltip" data-original-title="Edit user">
+                          <i class="fa fa-edit text-xs"></i>
                         </a>
                       </td>
                     </tr>
@@ -227,7 +256,7 @@
                       </td>
                       <td class="align-middle">
                         <a href="javascript:;" class="text-warning btn font-weight-bold text-xs p-1 border-radius-xl" data-toggle="tooltip" data-original-title="Edit user">
-                        <i class="fa fa-edit text-xs"></i>
+                          <i class="fa fa-edit text-xs"></i>
                         </a>
                       </td>
                     </tr>
@@ -338,9 +367,9 @@
                         </div>
                       </td>
                       <td class="align-middle">
-                      <a href="#" class="btn btn-sm text-warning mb-0">
+                        <a href="#" class="btn btn-sm text-warning mb-0">
                           <i class="fa fa-edit text-xs"></i>
-                      </a>
+                        </a>
                         <a href="#" class="btn btn-sm text-info mb-0">
                           <i class="fa fa-send text-xs"></i>
                         </a>
@@ -357,37 +386,37 @@
         </div>
       </div>
       <footer class="footer py-4>
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-4 mb-lg-0 mb-4">
-              <div class="copyright text-center text-sm text-muted text-lg-start">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                made with <i class="fa fa-heart"></i> by
-                <a href="https://is-haka.github.io" class="font-weight-bold" target="_blank">Is-haka Pro.</a>
-              </div>
+        <div class=" container-fluid">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-lg-4 mb-lg-0 mb-4">
+            <div class="copyright text-center text-sm text-muted text-lg-start">
+              © <script>
+                document.write(new Date().getFullYear())
+              </script>,
+              made with <i class="fa fa-heart"></i> by
+              <a href="https://is-haka.github.io" class="font-weight-bold" target="_blank">Is-haka Pro.</a>
             </div>
-            <div class="col-lg-3">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+          </div>
+          <div class="col-lg-3">
+            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
               <li class="nav-item">
                 <!-- <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Distributed By: ThemeWagon</a> -->
               </li>
             </ul>
-            </div>
-            <div class="col-lg-3">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="#" class="nav-link text-muted" target="_blank">LOGO NAME</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link text-muted" target="_blank">About Us</a>
-                </li>
-              </ul>
-            </div>
+          </div>
+          <div class="col-lg-3">
+            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-muted" target="_blank">LOGO NAME</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-muted" target="_blank">About Us</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
+    </div>
+    </footer>
     </div>
   </main>
   <div class="fixed-plugin">
@@ -465,6 +494,30 @@
       }
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
+    var reg = document.getElementById("reg");
+    var use = document.getElementById("use");
+    const hidden = document.querySelectorAll(".hidden");
+    const hidden_ = document.querySelectorAll(".hidden_");
+    reg.addEventListener("click", () => {
+      for (const hiddens of hidden) {
+        const hasInvisClass = hiddens.classList.contains('invis');
+        if (hasInvisClass) {
+          hiddens.classList.remove('invis');
+        } else {
+          hiddens.classList.add('invis');
+        }
+      }
+    });
+    use.addEventListener("click", () => {
+      for (const hiddens_ of hidden_) {
+        const hasInvisClass = hiddens_.classList.contains('invis');
+        if (hasInvisClass) {
+          hiddens_.classList.remove('invis');
+        } else {
+          hiddens_.classList.add('invis');
+        }
+      }
+    });
   </script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>

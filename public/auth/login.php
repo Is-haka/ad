@@ -26,14 +26,14 @@
         $uname = mysqli_real_escape_string($db, trim(strip_tags($_POST['log_uname'])));
         $password = mysqli_real_escape_string($db, trim(strip_tags($_POST['log_pass'])));
 
-        $result = mysqli_query($db, "SELECT * FROM users WHERE '$uname' = `username` ");
+        $result = mysqli_query($db, "SELECT * FROM users WHERE `email` = '$uname' ");
         if ($result) {
             if (mysqli_num_rows($result) == 1) {
                 $row = mysqli_fetch_assoc($result);
-                if ($password === $row['password']) {
-                    if ($row['roleID'] == "2") {
+                if (password_verify($password, $row['password'])) {
+                    if ($row['roleID'] == "1") {
                         $_SESSION["admin"] = "$uname";
-                        header("location: ../../admin/");
+                        header("location: ../../admin/pages/dashboard.php");
                     }
                     else{
                         ?>
